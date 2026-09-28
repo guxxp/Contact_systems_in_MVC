@@ -8,5 +8,17 @@ namespace Contact_systems_in_MVC.Controllers
         {
             return View();
         }
+        public IActionResult CriarContato()
+        {
+            return View();
+        }
+        public IActionResult EditarContao()
+        {
+            return View();
+        }
+        public IActionResult ApagarContao()
+        {
+            return View();
+        }
     }
 }
