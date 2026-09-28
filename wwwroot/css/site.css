@@ -18,7 +18,16 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  padding-bottom: 60px; /* espaço para o footer fixo */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1030; /* acima do conteúdo, abaixo de modais */
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {

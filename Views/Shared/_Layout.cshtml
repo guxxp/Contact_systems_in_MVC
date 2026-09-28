@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="~/Contact_systems_in_MVC.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <div class="d-flex flex-column min-vh-100">
+        <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Controle de Contatos</a>
@@ -31,17 +32,18 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Controle de Contatos
+        <div class="container flex-fill">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
+
+        <footer class="border-top footer text-muted mt-auto">
+            <div class="container">
+                &copy; 2026 - Controle de Contatos
+            </div>
+        </footer>
+    </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

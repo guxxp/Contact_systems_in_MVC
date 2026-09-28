@@ -12,11 +12,11 @@ namespace Contact_systems_in_MVC.Controllers
         {
             return View();
         }
-        public IActionResult EditarContao()
+        public IActionResult EditarContato()
         {
             return View();
         }
-        public IActionResult ApagarContao()
+        public IActionResult ApagarConfirmacao()
         {
             return View();
         }
