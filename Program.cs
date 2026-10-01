@@ -1,3 +1,6 @@
+using Contact_systems_in_MVC.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Contact_systems_in_MVC
 {
     public class Program
@@ -9,7 +12,14 @@ namespace Contact_systems_in_MVC
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+
+                builder.Services.AddDbContext<BancoContext>(options =>
+                options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("DataBase")
+                    )
+                );
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
