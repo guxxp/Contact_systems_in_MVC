@@ -1,4 +1,5 @@
 using Contact_systems_in_MVC.Data;
+using Contact_systems_in_MVC.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
 namespace Contact_systems_in_MVC
@@ -18,6 +19,8 @@ namespace Contact_systems_in_MVC
                     builder.Configuration.GetConnectionString("DataBase")
                     )
                 );
+            builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+
             var app = builder.Build();
 
 
