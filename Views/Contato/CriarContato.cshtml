@@ -16,23 +16,26 @@
 </div>
 
 
-<form asp asp-controller="Contato" asp-action="Criar" method="post">
+<form asp-controller="Contato" asp-action="Criar" method="post">
 
 
 
     <div class="mb-3">
         <label for="nome" class="form-label"> Nome </label>
-        <input type="text"  asp-for = "Nome" class="form-control"placeholder="Digite o Nome do Contato" >
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o Nome do Contato">
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label for="email" class="form-label"> Email </label>
-        <input type="text" asp-for="Email"  class="form-control" placeholder="Digite o E-mail do Contato">
+        <input type="text" asp-for="Email" class="form-control" placeholder="Digite o E-mail do Contato">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
         <label for="celular" class="form-label"> Celular </label>
-        <input type="text" asp-for= "Telefone "  class="form-control" placeholder="Digite o Celular do Contato">
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o Celular do Contato">
+        <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
 
     <div class="d-grid gap-2">
