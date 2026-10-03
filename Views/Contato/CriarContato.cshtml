@@ -7,14 +7,11 @@
 
 
 
-<div class="text-center">
-
-
-    <h1 class="display-5"> Cadastrar Contato</h1>
-
-    
-</div>
-
+<div class="content-card form-card">
+    <div class="page-heading">
+        <h1 class="h2">Cadastrar contato</h1>
+        <p>Preencha os dados abaixo para adicionar um novo contato.</p>
+    </div>
 
 <form asp-controller="Contato" asp-action="Criar" method="post">
 
@@ -38,9 +35,9 @@
         <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
 
-    <div class="d-grid gap-2">
-      <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
-    <a class="btn btn-secondary btn-block" asp-controller="Contato" asp-action="Index" role="button">Voltar</a> 
+    <div class="d-flex gap-2 pt-2">
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+    <a class="btn btn-outline-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a> 
     </div>
 
 </form>

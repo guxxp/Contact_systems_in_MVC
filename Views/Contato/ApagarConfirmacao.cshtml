@@ -5,19 +5,15 @@
 
 
 
-<div class="text-center">
+<div class="content-card form-card text-center">
+    <div class="hero-icon">!</div>
+    <h1 class="h3 mb-3">Excluir contato?</h1>
+    <p class="text-muted mb-4">Tem certeza de que deseja apagar <strong>@Model.Nome</strong>? Esta ação não poderá ser desfeita.</p>
 
+<div class="d-flex justify-content-center gap-2">
 
-    <h3 class="display-5"> Realmente Deseja Apagar o Contato (@Model.Nome) </h3>
+    <a class="btn btn-danger" asp-controller="Contato" asp-action="Apagar" asp-route-id="@Model.Id" role="button">Apagar contato</a>
 
-    
+    <a class="btn btn-outline-secondary" asp-controller="Contato" asp-action="Index" role="button">Cancelar</a>
 </div>
-
-<br/>
-
-<div class="d-grid gap-2">
-
-    <a class="btn btn-primary" asp-controller="Contato" asp-action="Apagar" asp-route-id="@Model.Id" role="button">Apagar</a>
-
-    <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
 </div>

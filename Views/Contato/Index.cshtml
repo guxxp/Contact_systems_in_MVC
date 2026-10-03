@@ -6,15 +6,13 @@
 
 
 
-<div class="text-center">
-
-
-	<div class="d-grip gap-2 d-md-flex justify-content-md-start">
-
-		<a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="CriarContato"> Adicionar novo Contato </a>
-
+<div class="page-heading d-flex flex-wrap align-items-center justify-content-between gap-3">
+	<div>
+		<h1 class="h2 mb-1">Meus contatos</h1>
+		<p class="mb-0">Consulte e gerencie seus contatos cadastrados.</p>
 	</div>
-	<br />
+	<a class="btn btn-primary" role="button" asp-controller="Contato" asp-action="CriarContato">+ Adicionar contato</a>
+</div>
 
 
 	@if(TempData["MensagemSucesso"] != null)
@@ -33,8 +31,7 @@
 		</div>
 	}
 
-	<h1 class="display-5"> Listagem De Contatos </h1>
-
+   <div class="content-card table-card">
 	<table class="table">
 		<thead>
 			<tr>
@@ -70,5 +67,6 @@
 
        
 		</tbody>
-	</table>
+    </table>
+	</div>
 </div>
